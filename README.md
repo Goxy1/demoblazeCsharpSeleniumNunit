@@ -1,2 +1,13 @@
-# demoblazeCsharpSeleniumNunit
-creating automated tests for the Demoblaze website. The tests were written in C# using NUnit and Selenium
+Introduction
+------------------
+Selenium automation project based on POM-u (Page Object Model)
+
+Getting Started
+------------------
+1. Clone project from:
+2. Open project in Visual Studio
+
+Build and Test
+------------------
+1. Build project
+2. From Test Explorer tab select test and run them by clicking on run button
