@@ -9,7 +9,7 @@ namespace AutomationFramework.Tests
         public void SignUpUser()
         {
             Pages.SignUpPage.SignUpUser(
-                TestData.TestData.SignUpUser.GenerateRandomUsername(),
+                TestData.TestData.SignUpUser.username,
                 TestData.TestData.SignUpUser.password
             );
 
@@ -21,15 +21,15 @@ namespace AutomationFramework.Tests
 
         }
 
-       // [TearDown]
-       // public void LoginUser()
-       // {
-       //    Pages.LoginPage.Login(
-         //      TestData.TestData.SignUpUser.username,
-           //     TestData.TestData.SignUpUser.password
-          //  );
-         // string username = Pages.LoginPage.GetUsername();
-        //  Assert.AreEqual(username, $"Welcome {TestData.TestData.SignUpUser.username}");
-       // }
+        [TearDown]
+        public void LoginUser()
+        {
+           Pages.LoginPage.Login(
+               TestData.TestData.SignUpUser.username,
+                TestData.TestData.SignUpUser.password
+            );
+          string username = Pages.LoginPage.GetUsername();
+          Assert.AreEqual(username, $"Welcome {TestData.TestData.SignUpUser.username}");
+        }
     }
 }

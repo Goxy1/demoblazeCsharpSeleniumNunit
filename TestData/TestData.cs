@@ -29,15 +29,12 @@ namespace AutomationFramework.TestData
                                 message = "iphone je MOZDA najbolji telefon";
         }
         /// <summary>
-        /// Metoda koja ce generisati random username iq200 move
+        /// Metoda koja ce generisati random username 
         /// </summary>
         public static class SignUpUser
         {
-            public static string GenerateRandomUsername()
-            {
-                var random = new Random();
-                return "user" + random.Next(10000, 99999);
-            }
+            public static Random r = new Random();
+            public static string username = ""+r.Next(974,10000);
             public const string password = "fensiusernamekojinosiiphone12";
         }
 

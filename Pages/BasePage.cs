@@ -110,7 +110,9 @@ namespace AutomationFramework.Pages
             return values;
 
         }
-
+        /// <summary>
+        /// Metoda koja brise prvi red u korpi
+        /// </summary>
         public void DeleteFirstRow()
         {
             try
