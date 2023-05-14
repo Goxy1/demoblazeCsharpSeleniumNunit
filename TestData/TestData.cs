@@ -1,4 +1,6 @@
-﻿namespace AutomationFramework.TestData
+﻿using System;
+
+namespace AutomationFramework.TestData
 {
     public class TestData
     {
@@ -26,11 +28,17 @@
                                 name = "neko fensi ime sa sufiksom iphone",
                                 message = "iphone je MOZDA najbolji telefon";
         }
-
+        /// <summary>
+        /// Metoda koja ce generisati random username iq200 move
+        /// </summary>
         public static class SignUpUser
         {
-            public const string username = "moracedrugiuser.3a",
-                                password = "fensiusernamekojinosiiphone12";
+            public static string GenerateRandomUsername()
+            {
+                var random = new Random();
+                return "user" + random.Next(10000, 99999);
+            }
+            public const string password = "fensiusernamekojinosiiphone12";
         }
 
         public static class AddToCart

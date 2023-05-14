@@ -111,6 +111,23 @@ namespace AutomationFramework.Pages
 
         }
 
+        public void DeleteFirstRow()
+        {
+            try
+            {
+                ReadOnlyCollection<IWebElement> rows = driver.FindElements(By.XPath("//tr[@class = 'success']"));
+                if(rows.Count > 0)
+                {
+                    IWebElement firstrow = rows[0];
+                    firstrow.FindElement(By.XPath("//a[contains(text(), 'Delete')]")).Click();
+                }
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+        }
+     
     }
 
     
